@@ -3,17 +3,17 @@ Description: >
   A cloud formation template that creates a static website that uses a custom domain to server traffic
   through a cloud front distribution with website static asserts hosted in an s3 bucket.
 Parameters:
-  DomainName:
+  DomainName: basicskillshub.com
     Type: String
     Description: The DNS name of an existing Amazon Route 53 hosted zone e.g kellyaudu.me
     AllowedPattern: (?!-)[a-zA-Z0-9-.]{1,63}(?<!-)
     ConstraintDescription: must be a valid DNS zone name
-  FullDomainName:
+  FullDomainName: www.basicskillshub.com
     Type: String
     Description: The full domain name e.g www.kellyaudu.io
     AllowedPattern: (?!-)[a-zA-Z0-9-.]{1,63}(?<!-)
     ConstraintDescription: must be a valid DNS zone name
-  AcmCertificateArn:
+  AcmCertificateArn: arn:aws:acm:us-east-1:143187677776:certificate/e5d067f6-057c-48c7-87fe-bea1d8705087
     Type: String
     Description: the Amazon Resource Name (ARN) of an AWS certificate(Certificate must be created in us-east-1 region)
     AllowedPattern: "arn:aws:acm:.*"
